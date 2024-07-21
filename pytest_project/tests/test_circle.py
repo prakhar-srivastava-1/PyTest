@@ -3,9 +3,9 @@ import pytest
 import source.shapes as shapes
 
 
+# class-based tests
 class TestCircle:
-    """Class-based tests for Circle class
-    """
+    """Class-based tests for Circle class"""
 
     def setup_method(self, method):
         """This function is responsible for setting up the pre-requisites
@@ -18,7 +18,7 @@ class TestCircle:
         self.circle = shapes.Circle(10)
 
     def teardown_method(self, method):
-        """This function is responsible for removing the objects which 
+        """This function is responsible for removing the objects which
         were setup during setup_method.
 
         Args:
@@ -28,11 +28,9 @@ class TestCircle:
         del self.circle
 
     def test_area(self):
-        """function to test if circle area is being calculated correctly
-        """
+        """function to test if circle area is being calculated correctly"""
         assert self.circle.area() == math.pi * self.circle.radius * self.circle.radius
 
     def test_perimeter(self):
-        """function to test if circle area is being calculated correctly
-        """
+        """function to test if circle area is being calculated correctly"""
         assert self.circle.perimeter() == 2 * math.pi * self.circle.radius
