@@ -1,4 +1,5 @@
 from source.fibonacci import fibonacci
+import pytest
 
 
 def test_fibonacci():
@@ -12,3 +13,12 @@ def test_fibonacci():
     assert fibonacci(6) == 8
     assert fibonacci(7) == 13
     assert fibonacci(8) == 14, "mismatch; test failed"
+
+
+# convert the above test into a parametrized test
+@pytest.mark.parametrize(
+    "nth_term, fibonacci_number",
+    [(0, 0), (1, 1), (2, 1), (3, 2), (4, 3), (5, 5), (6, 8), (7, 13), (8, 14)],
+)
+def test_fibonacci_parametrized(nth_term, fibonacci_number):
+    assert fibonacci(nth_term) == fibonacci_number
