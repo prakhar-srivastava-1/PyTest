@@ -74,3 +74,36 @@ class Rectangle(Shape):
             float: perimeter of the rectangle in units
         """
         return 2 * (self.length + self.width)
+
+
+class Square(Shape):
+    """Square class which inherits from Shape
+
+    Args:
+        Shape (Custom class): User-defined Shape class
+    """
+
+    def __init__(self, edge) -> None:
+        """Constructor for Square class
+
+        Args:
+            length (float): the length of instantiated Square
+            width (float): the width of instantiated Square
+        """
+        self.edge = edge
+
+    def area(self):
+        """Calculates the area of the square
+
+        Returns:
+            float: area of the square in square units
+        """
+        return self.edge * self.edge
+
+    def perimeter(self):
+        """Calculates the perimeter of the square
+
+        Returns:
+            float: perimeter of the square in units
+        """
+        return 4 * (self.edge)
