@@ -1,5 +1,6 @@
 from source.fibonacci import fibonacci
 
+
 def test_fibonacci():
     assert fibonacci(0) == 0
     assert fibonacci(1) == 1
@@ -10,4 +11,3 @@ def test_fibonacci():
     assert fibonacci(6) == 8
     assert fibonacci(7) == 13
     assert fibonacci(8) == 14, "mismatch; test failed"
-    
